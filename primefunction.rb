@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
-def prime?(start_range, end_range)
+def prime?(number)
   prime_flag = false
-  (start_range..end_range).each {|number|
+  
     if number == 1 then
-      puts number
+      return true
     end
     
     (2..number-1).each {|e|
@@ -16,10 +16,9 @@ def prime?(start_range, end_range)
       
       }
     if prime_flag then
-      puts number
+      return true
     end
    
-  }
   
   
 end
@@ -32,4 +31,11 @@ puts "Please enter the second number of range for prime number : "
 number2 = gets.to_i
 
 puts "Prime number in between #{number1} and #{number2} are : "
-prime?(number1, number2)
+
+(number1..number2).each {|e|
+  if prime?(e) then
+    puts e
+  end
+  
+  }
+
