@@ -15,7 +15,7 @@ while number_to_sum  != 0
   number_to_sum = number_to_sum/10
     
 end
-puts  sum_of_digit
+
 
 if recsum == sum_of_digit then
   puts recsum
